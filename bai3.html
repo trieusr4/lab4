@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body ng-app="myApp">
+    <div ng-controller="bai3">
+        <table>
+            <tr>
+                <th>Anh</th>
+                <th>Ten</th>
+                <th>ngay sinh</th>
+                <th>gioi tinh</th>
+                <th>diemtb</th>
+            </tr>
+            <tr>    
+                <td><img src="{{student[0].photo}}" alt=""></td>
+                <td>{{student[0].fullname}}</td>
+                <td>{{student[0].birtday}}</td>
+                <td>{{student[0].gender}}</td>
+                <td>{{student[0].mark}}</td>
+            </tr>
+            <tr>    
+                <td><img src="{{student[1].photo}}" alt=""></td>
+                <td>{{student[1].fullname}}</td>
+                <td>{{student[1].birtday}}</td>
+                <td>{{student[1].gender}}</td>
+                <td>{{student[1].mark}}</td>
+            </tr>
+            <tr>    
+                <td><img src="{{student[2].photo}}" alt=""></td>
+                <td>{{student[2].fullname}}</td>
+                <td>{{student[2].birtday}}</td>
+                <td>{{student[2].gender}}</td>
+                <td>{{student[2].mark}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        const app = angular.module("myApp", []);
+        app.controller("bai3", function ($scope) {
+            $scope.student = [
+                {
+                    fullname: "tran trieu",
+                    birtday: "11/01/2002",
+                    gender: "Male",
+                    photo: "https://picsum.photos/100/100",
+                    mark: "7",
+                },
+                {
+                    fullname: "tran du",
+                    birtday: "11/01/2003",
+                    gender: "Male",
+                    photo: "https://picsum.photos/100/100",
+                    mark: "7.5",
+                },
+                {
+                    fullname: "tran tuan",
+                    birtday: "11/01/2003",
+                    gender: "Male",
+                    photo: "https://picsum.photos/100/100",
+                    mark: "8",
+                }];
+        });
+    </script>
+</body>
+
+</html>

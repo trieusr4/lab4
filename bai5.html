@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-app="myApp">
+    <div ng-controller="bai5">
+        
+            <div>
+                <label for="">ho ten</label>
+                <input type="text" ng-model="name">
+            </div>
+            <div>
+                <label for="">ngay sinh</label>
+                <input type="text" ng-model="date">
+            </div>
+            <div>
+                <label for=""> gioi tinh</label>
+                <select name="" id="" ng-model="gender">
+                    <option value="">nam</option>
+                    <option value="">nu</option>
+                </select>
+            </div><div>
+                <label for="">diem</label>
+                <input type="text" ng-model="diem">
+            </div>
+            <div>
+                <label for="">hoc luc</label>
+                <input type="text" ng-model="hocLuc">
+            </div>
+            <div>
+                <label for="">luu </label>
+                <button ng-click="save()"> Luu </button>
+            </div>
+    
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script>
+        const app=angular.module("myApp",[]);
+        app.controller("bai5", function ($scope) {
+            $scope.save=function(){
+           var a = +$scope.diem;
+           if (a < 5 ){ $scope.hocLuc="truot";}
+           else { $scope.hocLuc="do"};   
+            }
+            })
+    </script>
+</body>
+</html>
